@@ -6,5 +6,7 @@ document.querySelector('#form').onsubmit = () => {
     }
     else { document.querySelector('#input').placeholder = 'Type something.' }
     document.querySelector('#input').value = ''; //Cleared InputField
+
+    //Local Storage Save
     return false;
 }
