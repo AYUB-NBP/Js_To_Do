@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To DO list</title>
     <link rel="stylesheet" href="style.css">
-    <script>document.addEventListener('DOMContentLoaded', () => {/*Local Storage Load Items*/ })</script>
+    <script>document.addEventListener('DOMContentLoaded', () => { document.getElementById('List').innerHTML = localStorage.getItem('listItems')/*Local Storage Load Items*/ })</script>
 </head>
 
 <body>
