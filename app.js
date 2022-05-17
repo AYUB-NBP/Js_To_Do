@@ -8,6 +8,8 @@ document.querySelector('#form').onsubmit = () => {
     document.querySelector('#input').value = ''; //Cleared InputField
 
     //Local Storage Save
-    localStorage.setItem('listItems',document.getElementById('List').innerHTML)
-    return false;
+    localStorage.setItem('listItems', document.getElementById('List').innerHTML)
+    return false; // Prevent refresh after submission
 }
+
+var listArr = document.getElementById('List').childNodes;
