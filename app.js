@@ -21,4 +21,4 @@ document.querySelector('#form').onsubmit = () => { /*Add new Item */
 
 var listArr = document.getElementById('List').childNodes;
 
-document.getElementById('clear').onclick = () => { window.localStorage.clear(); history.go(0); return false; }
+document.getElementById('clear').onclick = () => { window.localStorage.clear(); history.go(0); return false;}
