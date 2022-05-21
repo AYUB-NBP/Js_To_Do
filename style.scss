@@ -13,13 +13,6 @@ body {
         display: flex;
         justify-content: flex-start
     }
-
-    #submit,
-    button {
-        border: solid 2px;
-        border-radius: 0%;
-        border-color: linear-gradient(red, yellow);
-    }
 }
 
 #form {
@@ -28,11 +21,11 @@ body {
 
     #input {
         flex-grow: 2;
-        border: solid 2px;
-        border-radius: 0%;
     }
 
     * {
+        border: solid 3px;
+        border-radius: 0%;
         padding: 10px;
         margin-right: 10px;
     }
@@ -47,5 +40,10 @@ body {
         display: flex;
         justify-content: space-between;
         padding-top: 10px;
+    }
+
+    button {
+        border: solid 3px;
+        border-radius: 0%;
     }
 }
