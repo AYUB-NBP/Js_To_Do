@@ -2,26 +2,53 @@
   margin: 0;
 }
 
+body {
+  margin: 10%;
+}
+
 #app {
   margin: auto;
-  width: 600px;
 }
 
 #app header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#app #submit,
+#app button {
+  border: solid 2px;
+  border-radius: 0%;
+  border-color: linear-gradient(red, yellow);
 }
 
 #form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 30px auto;
+}
+
+#form #input {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  border: solid 2px;
+  border-radius: 0%;
+}
+
+#form * {
+  padding: 10px;
+  margin-right: 10px;
 }
 
 #List {
   padding: 0;
+  margin-right: 10px;
 }
 
 #List li {

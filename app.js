@@ -3,7 +3,8 @@
 document.querySelector('#form').onsubmit = () => {
     let newItem = document.createElement('li'); //NewLi
     let newBtn = document.createElement('button'); //NewBtn
-    
+    newBtn.innerHTML = 'X';
+
     
     if (document.querySelector('#input').value != '') {
         newItem.innerHTML = document.querySelector('#input').value;//Filled NewLi with input value
