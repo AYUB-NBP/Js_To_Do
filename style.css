@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+}
+
+#app {
+  margin: auto;
+  width: 600px;
+}
+
+#app header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#form {
+  margin: 30px auto;
+}
+
+#List {
+  padding: 0;
+}
+
+#List li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 10px;
+}
+/*# sourceMappingURL=style.css.map */
