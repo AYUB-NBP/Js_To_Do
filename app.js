@@ -9,9 +9,9 @@ document.querySelector('#form').onsubmit = () => {
     //Adding class to newBtn
     newBtn.classList.add('rmvBtn');
     //Remove Buttons Array
-    rmvBtns = document.querySelectorAll('.rmvBtn')
+    var rmvBtns = document.querySelectorAll('.rmvBtn')
     //Item Removal Function
-    function removeListItem() { console.log('Event working'); }
+    //function removeListItem() { console.log('Event working'); }
     //Button Filler
     newBtn.innerHTML = 'X';
 
