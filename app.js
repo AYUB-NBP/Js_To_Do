@@ -6,6 +6,8 @@ document.querySelector('#form').onsubmit = () => {
     let newItem = document.createElement('li');
     //NewBtn (removing button for each list item)
     var newBtn = document.createElement('button');
+    // Add Self Deletion functionality onclick
+    newBtn.setAttribute("onclick", "this.closest('li').remove()")
     //Adding class to newBtn
     newBtn.classList.add('rmvBtn');
     //Remove Buttons Array
@@ -37,7 +39,8 @@ document.querySelector('#form').onsubmit = () => {
     // Prevent refresh after submission
     return false;
 }
+// Remove each list item
+let ListItems = document.getElementById('List').childNodes;
 
 // Clear All Button function
 document.getElementById('clear').onclick = () => { window.localStorage.clear(); history.go(0); return false; }//Clear Local Storage
-
