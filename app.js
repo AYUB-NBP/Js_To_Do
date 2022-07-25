@@ -4,20 +4,18 @@
 document.querySelector('#form').onsubmit = () => {
     //New list item
     let newItem = document.createElement('li');
-    //NewBtn (removing button for each list item)
+
+    //New remove button
     var newBtn = document.createElement('button');
+
     // Add Self Deletion functionality onclick
     newBtn.setAttribute("onclick", "localStorage.removeItem(this.closest('li').innerText);this.closest('li').remove()")
+
     //Adding class to newBtn
     newBtn.classList.add('rmvBtn');
-    //Remove Buttons Array
-    const rmvBtns = document.querySelectorAll('.rmvBtn')
-    //Item Removal Function
-    //function removeListItem() { console.log('Event working'); }
+
     //Button Filler
     newBtn.innerHTML = '<img src="X.svg" alt="Delete" style="border: none;">';
-
-
 
     if (document.querySelector('#input').value != '') {
         //Fill New Li with input value
@@ -30,7 +28,6 @@ document.querySelector('#form').onsubmit = () => {
 
     //Cleared InputField
     document.querySelector('#input').value = '';
-
 
     //Local Storage Save
     localStorage.setItem(newItem.innerText, newItem.outerHTML)
