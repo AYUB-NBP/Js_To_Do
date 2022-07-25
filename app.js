@@ -7,7 +7,7 @@ document.querySelector('#form').onsubmit = () => {
     //NewBtn (removing button for each list item)
     var newBtn = document.createElement('button');
     // Add Self Deletion functionality onclick
-    newBtn.setAttribute("onclick", "this.closest('li').remove()")
+    newBtn.setAttribute("onclick", "localStorage.removeItem(this.closest('li').innerText);this.closest('li').remove()")
     //Adding class to newBtn
     newBtn.classList.add('rmvBtn');
     //Remove Buttons Array
@@ -15,17 +15,16 @@ document.querySelector('#form').onsubmit = () => {
     //Item Removal Function
     //function removeListItem() { console.log('Event working'); }
     //Button Filler
-    newBtn.innerHTML = 'X';
+    newBtn.innerHTML = '<img src="X.svg" alt="Delete" style="border: none;">';
 
 
 
     if (document.querySelector('#input').value != '') {
-        //Fill NewLi with input value
+        //Fill New Li with input value
         newItem.innerHTML = document.querySelector('#input').value;
         //Inserted newItem to list
         document.getElementById('List').appendChild(newItem);
         newItem.appendChild(newBtn);
-        history.go(0);
     }
     else { document.querySelector('#input').placeholder = 'Type something.' }
 
@@ -34,13 +33,11 @@ document.querySelector('#form').onsubmit = () => {
 
 
     //Local Storage Save
-    localStorage.setItem('listItems', document.getElementById('List').innerHTML)
+    localStorage.setItem(newItem.innerText, newItem.outerHTML)
 
     // Prevent refresh after submission
     return false;
 }
-// Remove each list item
-let ListItems = document.getElementById('List').childNodes;
 
 // Clear All Button function
 document.getElementById('clear').onclick = () => { window.localStorage.clear(); history.go(0); return false; }//Clear Local Storage
