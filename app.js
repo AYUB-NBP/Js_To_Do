@@ -15,7 +15,7 @@ document.querySelector('#form').onsubmit = () => {
     newBtn.classList.add('rmvBtn');
 
     //Button Filler
-    newBtn.innerHTML = '<img src="X.svg" alt="Delete" style="border: none;">';
+    newBtn.innerHTML = '<img src="X.png" alt="Delete" style="border: none;">';
 
     if (document.querySelector('#input').value != '') {
         //Fill New Li with input value
